@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignInView: View {
     @State private var email : String = ""
     @State private var password : String = ""
     @State private var wrongPassword = 0
@@ -75,5 +75,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    SignInView()
 }
