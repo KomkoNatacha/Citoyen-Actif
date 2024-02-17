@@ -8,15 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1E666B532B7D9451007E88C6 /* CitoyenActifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B522B7D9451007E88C6 /* CitoyenActifApp.swift */; };
-		1E666B552B7D9451007E88C6 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B542B7D9451007E88C6 /* SignInView.swift */; };
+		1E666B552B7D9451007E88C6 /* SignInCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B542B7D9451007E88C6 /* SignInCView.swift */; };
 		1E666B572B7D9453007E88C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E666B562B7D9453007E88C6 /* Assets.xcassets */; };
 		1E666B5A2B7D9453007E88C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E666B592B7D9453007E88C6 /* Preview Assets.xcassets */; };
 		1E666B642B7D9453007E88C6 /* CitoyenActifTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B632B7D9453007E88C6 /* CitoyenActifTests.swift */; };
 		1E666B6E2B7D9453007E88C6 /* CitoyenActifUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B6D2B7D9453007E88C6 /* CitoyenActifUITests.swift */; };
 		1E666B702B7D9453007E88C6 /* CitoyenActifUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B6F2B7D9453007E88C6 /* CitoyenActifUITestsLaunchTests.swift */; };
-		1E666B7F2B7DD7D0007E88C6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B7E2B7DD7D0007E88C6 /* SignUpView.swift */; };
-		1E666B812B7DD91D007E88C6 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B802B7DD91D007E88C6 /* ResetPasswordView.swift */; };
-		1E6A8C4D2B7E98BE00EBDD37 /* SignInAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A8C4C2B7E98BD00EBDD37 /* SignInAgentView.swift */; };
+		1E666B7F2B7DD7D0007E88C6 /* SignUpCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B7E2B7DD7D0007E88C6 /* SignUpCView.swift */; };
+		1E666B812B7DD91D007E88C6 /* ResetPasswordCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B802B7DD91D007E88C6 /* ResetPasswordCView.swift */; };
+		1E6A8C4D2B7E98BE00EBDD37 /* SignUpAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A8C4C2B7E98BD00EBDD37 /* SignUpAView.swift */; };
+		1E80420F2B7FE459000B7BBB /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80420E2B7FE459000B7BBB /* MainPageView.swift */; };
+		1E8042112B8048E5000B7BBB /* SignInAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8042102B8048E5000B7BBB /* SignInAView.swift */; };
+		1E8042132B804AF0000B7BBB /* ResetPasswordAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8042122B804AF0000B7BBB /* ResetPasswordAView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 /* Begin PBXFileReference section */
 		1E666B4F2B7D9451007E88C6 /* CitoyenActif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitoyenActif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E666B522B7D9451007E88C6 /* CitoyenActifApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitoyenActifApp.swift; sourceTree = "<group>"; };
-		1E666B542B7D9451007E88C6 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		1E666B542B7D9451007E88C6 /* SignInCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCView.swift; sourceTree = "<group>"; };
 		1E666B562B7D9453007E88C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E666B592B7D9453007E88C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E666B5F2B7D9453007E88C6 /* CitoyenActifTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitoyenActifTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,9 +50,12 @@
 		1E666B692B7D9453007E88C6 /* CitoyenActifUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitoyenActifUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E666B6D2B7D9453007E88C6 /* CitoyenActifUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitoyenActifUITests.swift; sourceTree = "<group>"; };
 		1E666B6F2B7D9453007E88C6 /* CitoyenActifUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitoyenActifUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1E666B7E2B7DD7D0007E88C6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		1E666B802B7DD91D007E88C6 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
-		1E6A8C4C2B7E98BD00EBDD37 /* SignInAgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAgentView.swift; sourceTree = "<group>"; };
+		1E666B7E2B7DD7D0007E88C6 /* SignUpCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCView.swift; sourceTree = "<group>"; };
+		1E666B802B7DD91D007E88C6 /* ResetPasswordCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCView.swift; sourceTree = "<group>"; };
+		1E6A8C4C2B7E98BD00EBDD37 /* SignUpAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAView.swift; sourceTree = "<group>"; };
+		1E80420E2B7FE459000B7BBB /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		1E8042102B8048E5000B7BBB /* SignInAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAView.swift; sourceTree = "<group>"; };
+		1E8042122B804AF0000B7BBB /* ResetPasswordAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordAView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +106,10 @@
 		1E666B512B7D9451007E88C6 /* CitoyenActif */ = {
 			isa = PBXGroup;
 			children = (
-				1E6A8C4B2B7E910C00EBDD37 /* viewModels */,
-				1E6A8C4A2B7E910000EBDD37 /* views */,
-				1E6A8C492B7E905400EBDD37 /* models */,
+				1E8042092B7FDF55000B7BBB /* citizens */,
+				1E80420A2B7FDF83000B7BBB /* municipalAgents */,
 				1E666B522B7D9451007E88C6 /* CitoyenActifApp.swift */,
+				1E80420E2B7FE459000B7BBB /* MainPageView.swift */,
 				1E666B562B7D9453007E88C6 /* Assets.xcassets */,
 				1E666B582B7D9453007E88C6 /* Preview Content */,
 			);
@@ -145,15 +151,58 @@
 		1E6A8C4A2B7E910000EBDD37 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				1E666B802B7DD91D007E88C6 /* ResetPasswordView.swift */,
-				1E666B7E2B7DD7D0007E88C6 /* SignUpView.swift */,
-				1E666B542B7D9451007E88C6 /* SignInView.swift */,
-				1E6A8C4C2B7E98BD00EBDD37 /* SignInAgentView.swift */,
+				1E666B542B7D9451007E88C6 /* SignInCView.swift */,
+				1E666B7E2B7DD7D0007E88C6 /* SignUpCView.swift */,
+				1E666B802B7DD91D007E88C6 /* ResetPasswordCView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
 		1E6A8C4B2B7E910C00EBDD37 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		1E8042092B7FDF55000B7BBB /* citizens */ = {
+			isa = PBXGroup;
+			children = (
+				1E6A8C492B7E905400EBDD37 /* models */,
+				1E6A8C4A2B7E910000EBDD37 /* views */,
+				1E6A8C4B2B7E910C00EBDD37 /* viewModels */,
+			);
+			path = citizens;
+			sourceTree = "<group>";
+		};
+		1E80420A2B7FDF83000B7BBB /* municipalAgents */ = {
+			isa = PBXGroup;
+			children = (
+				1E80420C2B7FE35D000B7BBB /* models */,
+				1E80420B2B7FE34B000B7BBB /* views */,
+				1E80420D2B7FE36F000B7BBB /* viewModels */,
+			);
+			path = municipalAgents;
+			sourceTree = "<group>";
+		};
+		1E80420B2B7FE34B000B7BBB /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1E8042102B8048E5000B7BBB /* SignInAView.swift */,
+				1E6A8C4C2B7E98BD00EBDD37 /* SignUpAView.swift */,
+				1E8042122B804AF0000B7BBB /* ResetPasswordAView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		1E80420C2B7FE35D000B7BBB /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		1E80420D2B7FE36F000B7BBB /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -290,11 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E6A8C4D2B7E98BE00EBDD37 /* SignInAgentView.swift in Sources */,
-				1E666B552B7D9451007E88C6 /* SignInView.swift in Sources */,
-				1E666B7F2B7DD7D0007E88C6 /* SignUpView.swift in Sources */,
+				1E6A8C4D2B7E98BE00EBDD37 /* SignUpAView.swift in Sources */,
+				1E666B552B7D9451007E88C6 /* SignInCView.swift in Sources */,
+				1E80420F2B7FE459000B7BBB /* MainPageView.swift in Sources */,
+				1E666B7F2B7DD7D0007E88C6 /* SignUpCView.swift in Sources */,
 				1E666B532B7D9451007E88C6 /* CitoyenActifApp.swift in Sources */,
-				1E666B812B7DD91D007E88C6 /* ResetPasswordView.swift in Sources */,
+				1E8042132B804AF0000B7BBB /* ResetPasswordAView.swift in Sources */,
+				1E666B812B7DD91D007E88C6 /* ResetPasswordCView.swift in Sources */,
+				1E8042112B8048E5000B7BBB /* SignInAView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

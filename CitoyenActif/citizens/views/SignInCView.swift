@@ -13,60 +13,69 @@ struct SignInCView: View {
     @State private var wrongPassword = 0
     @State private var wrongEmail = 0
 
-
-    
     var body: some View {
         
-            VStack {
+            VStack() {
+                HStack {
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Image(systemName: "arrow.left")
+                            .font(.title2)
+                            .foregroundStyle(.black)
+                    })
+                    .padding(.top,5)
+                    Spacer()
+                }  
+                
                 Image("Image")
-                    .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 200,height: 200)
-                    .cornerRadius(10)
                     .padding()
                 
+                    
                 Text("Sign In")
                     .font(.largeTitle)
                     .bold()
                     .padding(.bottom, 5)
 
                 
-                Text("Sign in to your account")
-                    .foregroundColor(Color.black.opacity(0.6))
+                Text("Citizen")
+                    .foregroundStyle(Color.black.opacity(0.6))
                     .padding(.bottom, 10)
                 
                 TextField("Email",text: $email)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(Color.black.opacity(0.05))
+                    .background(Color.black.opacity(0.08))
                     .border(.red,width: CGFloat(wrongEmail))
                     .padding(.bottom, 10)
-                    .cornerRadius(10)
-                
+                    
+                   
+
                 SecureField("Password",text: $password)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(Color.black.opacity(0.05))
+                    .background(Color.black.opacity(0.08))
                     .border(.red,width: CGFloat(wrongPassword))
                     .padding(.bottom, 10)
-                    .cornerRadius(10)
 
                 
-                Button("Login"){
+                Button("Sign In"){
                     
                 }
-                .foregroundColor(.white)
+                
+                .foregroundStyle(.white)
                 .frame(width: 320,height: 50)
                 .background(Color.blue)
-                .cornerRadius(10)
                 .padding(.bottom, 10)
 
+                
                 Text("New user? Create Account.")
-                    .foregroundColor(Color.orange.opacity(1))
+                    .foregroundStyle(Color.orange.opacity(1))
                     .padding(.bottom, 20)
+                    
                 
                 Text("Forgot Password?")
-                    .foregroundColor(Color.blue.opacity(0.6))
+                    .foregroundStyle(Color.blue.opacity(0.6))
 
             }
             .padding()

@@ -8,8 +8,81 @@
 import SwiftUI
 
 struct ResetPasswordAView: View {
+    @State private var agentNumber : String = ""
+    @State private var password : String = ""
+    @State private var confPassword : String = ""
+    @State private var wrongNumber = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            HStack {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Image(systemName: "arrow.left")
+                        .font(.title2)
+                        .foregroundStyle(.black)
+                })
+                .padding(.top,5)
+                Spacer()
+            }
+            
+            Image("Image")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 200,height: 200)
+                .padding()
+            
+            Text("Forgot Password")
+                .font(.largeTitle)
+                .bold()
+                .padding(.bottom, 5)
+            
+            
+            Text("Municipal Agent")
+                .foregroundStyle(Color.black.opacity(0.6))
+                .padding(.bottom, 15)
+            
+            
+            TextField("Agent number",text: $agentNumber)
+                .padding()
+                .frame(width: 320,height: 50)
+                .background(Color.black.opacity(0.05))
+                .border(.red,width: CGFloat(wrongNumber))
+                .keyboardType(.emailAddress)
+            
+            
+            
+            TextField("Password",text: $password)
+                .padding()
+                .frame(width: 320,height: 50)
+                .background(Color.black.opacity(0.05))
+            
+            
+            TextField("Confirmation Password",text: $confPassword)
+                .padding()
+                .frame(width: 320,height: 50)
+                .background(Color.black.opacity(0.05))
+                .padding(.bottom, 10)
+            
+            
+            
+            Button("Reset "){
+                
+            }
+            .foregroundStyle(.white)
+            .frame(width: 320,height: 50)
+            .background(Color.blue)
+            .padding(.bottom, 15)
+            
+            Text("You remember? Login here.")
+                .foregroundStyle(Color.orange.opacity(1))
+                .padding(.bottom, 10)
+                .bold()
+            
+            
+        }
+        .padding()
+
     }
 }
 

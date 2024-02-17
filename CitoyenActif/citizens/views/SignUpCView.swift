@@ -19,11 +19,19 @@ struct SignUpCView: View {
     var body: some View {
         
         VStack {
+            HStack {
+                Button(action: {}, label: {
+                    Image(systemName: "arrow.left")
+                        .font(.title2)
+                        .foregroundStyle(.black)
+                })
+                .padding(.top,5)
+                Spacer()
+            }
             Image("Image")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 130,height: 130)
-                .cornerRadius(10)
                
             
             Text("Sign Up")
@@ -32,21 +40,19 @@ struct SignUpCView: View {
                 .padding(.bottom, 5)
 
             
-            Text("Create your account")
-                .foregroundColor(Color.black.opacity(0.6))
+            Text("Citizen")
+                .foregroundStyle(Color.black.opacity(0.6))
                 .padding(.bottom, 10)
             
             TextField("Firstname",text: $firsname)
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
             
             TextField("Lastname",text: $lastname)
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
             
         
 
@@ -56,7 +62,6 @@ struct SignUpCView: View {
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
                 .border(.red,width: CGFloat(wrongEmail))
-                .cornerRadius(10)
                 .keyboardType(.emailAddress)
 
         
@@ -65,7 +70,6 @@ struct SignUpCView: View {
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
                 .keyboardType(.phonePad)
             
             
@@ -74,32 +78,28 @@ struct SignUpCView: View {
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
             
             TextField("Password",text: $password)
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
                 .padding(.bottom, 10)
-                .cornerRadius(10)
 
             
             Button("Sign Up "){
                 
             }
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .frame(width: 320,height: 50)
             .background(Color.orange)
-            .cornerRadius(10)
-            .padding(.bottom, 10)
+            .padding(.bottom, 15)
 
-            Text("Municipal agents? Click here.")
-                .foregroundColor(Color.blue.opacity(1))
+            Text("Already have an account? Sign In.")
+                .foregroundStyle(Color.blue.opacity(0.7))
                 .padding(.bottom, 10)
                 .bold()
             
-            Text("Already have an account? Sign In.")
-                .foregroundColor(Color.blue.opacity(0.6))
+            
 
         }
         .padding()

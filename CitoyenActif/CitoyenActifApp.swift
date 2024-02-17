@@ -11,7 +11,7 @@ import SwiftUI
 struct CitoyenActifApp: App {
     var body: some Scene {
         WindowGroup {
-            SignInView()
+            MainPageView()
         }
     }
 }

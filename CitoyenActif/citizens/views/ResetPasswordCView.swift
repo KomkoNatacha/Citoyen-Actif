@@ -17,11 +17,20 @@ struct ResetPasswordCView: View {
     var body: some View {
         
         VStack {
+            HStack {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Image(systemName: "arrow.left")
+                        .font(.title2)
+                        .foregroundStyle(.black)
+                })
+                .padding(.top,5)
+                Spacer()
+            }
+            
             Image("Image")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 200,height: 200)
-                .cornerRadius(10)
                 .padding()
             
             Text("Forgot Password")
@@ -30,8 +39,8 @@ struct ResetPasswordCView: View {
                 .padding(.bottom, 5)
             
             
-            Text("Reset your pasword")
-                .foregroundColor(Color.black.opacity(0.6))
+            Text("Citizen")
+                .foregroundStyle(Color.black.opacity(0.6))
                 .padding(.bottom, 15)
             
 
@@ -40,7 +49,6 @@ struct ResetPasswordCView: View {
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
                 .border(.red,width: CGFloat(wrongEmail))
-                .cornerRadius(10)
                 .keyboardType(.emailAddress)
 
 
@@ -49,7 +57,6 @@ struct ResetPasswordCView: View {
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
             
             
             TextField("Confirmation Password",text: $confPassword)
@@ -57,20 +64,19 @@ struct ResetPasswordCView: View {
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
                 .padding(.bottom, 10)
-                .cornerRadius(10)
+                
             
             
             Button("Reset "){
                 
             }
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .frame(width: 320,height: 50)
             .background(Color.blue)
-            .cornerRadius(10)
             .padding(.bottom, 15)
             
             Text("You remember? Login here.")
-                .foregroundColor(Color.orange.opacity(1))
+                .foregroundStyle(Color.orange.opacity(1))
                 .padding(.bottom, 10)
                 .bold()
             
