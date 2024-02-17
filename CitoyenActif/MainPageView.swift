@@ -7,34 +7,41 @@
 
 import SwiftUI
 
-struct MainPageView: View {
+struct  MainPageView: View {
+    @State private var showSignInC = false
+    @State private var showSignInA = false
 
     var body: some View {
         
-            VStack {
-                
-                Image("mainIcon")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 200,height: 200)
-                    .padding()
-                
-                Text("Citoyen Actif")
-                    .font(.largeTitle)
-                    .bold()
-                    .padding(.bottom, 5)
-
-                Text("Report problems, improve your community")
-                    .foregroundStyle(Color.black.opacity(0.6))
-                    .padding(.bottom, 50)
+        VStack {
             
-                Text("Continue as ")
-                    .font(.title3)
-                    .padding(.bottom, 10)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                VStack(alignment: .leading, spacing: 10) {
+            Image("mainIcon")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 200,height: 200)
+                .padding()
             
+            Text("Citoyen Actif")
+                .font(.largeTitle)
+                .bold()
+                .padding(.bottom, 5)
+            
+            Text("Report problems, improve your community")
+                .foregroundStyle(Color.black.opacity(0.6))
+                .padding(.bottom, 50)
+            
+            
+            Text("Continue as")
+                .font(.title3)
+                .padding(.bottom, 10)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            VStack(alignment: .leading, spacing: 10) {
+                
+                Button(action: {
+                    showSignInC.toggle()
+                    
+                }) {
                     HStack {
                         
                         Image("LogoWoman")
@@ -52,14 +59,28 @@ struct MainPageView: View {
                             Text("Contribute to your community by reporting issues encountered.")
                                 .font(.subheadline)
                                 .foregroundStyle(Color.black.opacity(0.6))
+                                .multilineTextAlignment(.leading)
+
                         }
                         .padding(.leading,10)
+                        
                     }
-                    .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.white)
-                        .shadow(radius: 3))
                     
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.white)
+                            .shadow(radius: 3))
+                }
+                
+                .fullScreenCover(isPresented: $showSignInC) {
+                    SignInCView()
+                }
+                
+                
+                Button(action: {
+                    showSignInA.toggle()
+                    
+                }) {
                     HStack {
                         
                         Image("LogoMan")
@@ -72,22 +93,28 @@ struct MainPageView: View {
                                 .font(.headline)
                                 .bold()
                                 .foregroundStyle(Color.blue)
-                
+                            
                             Text("Take action to resolve reported    issues and improve local life.")
                                 .font(.subheadline)
                                 .foregroundStyle(Color.black.opacity(0.6))
+                                .multilineTextAlignment(.leading)
                         }
                         .padding(.leading,10)
                     }
                     .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.white)
-                        .shadow(radius: 3))
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.white)
+                            .shadow(radius: 3))
+                    
+                }
+                .fullScreenCover(isPresented: $showSignInA) {
+                    SignInAView()
                 }
             }
-            .padding()
-    }
-}
+        }
+        .padding()
+
+    }}
 
 
 #Preview {

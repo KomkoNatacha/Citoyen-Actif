@@ -47,8 +47,7 @@ struct ResetPasswordCView: View {
             TextField("Email",text: $email)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
-                .border(.red,width: CGFloat(wrongEmail))
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .border(.red,width: CGFloat(wrongEmail))
                 .keyboardType(.emailAddress)
 
 
@@ -56,14 +55,12 @@ struct ResetPasswordCView: View {
             TextField("Password",text: $password)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
-            
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
             
             TextField("Confirmation Password",text: $confPassword)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
-                .padding(.bottom, 10)
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .padding(.bottom, 10)
                 
             
             
@@ -72,7 +69,7 @@ struct ResetPasswordCView: View {
             }
             .foregroundStyle(.white)
             .frame(width: 320,height: 50)
-            .background(Color.blue)
+            .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
             .padding(.bottom, 15)
             
             Text("You remember? Login here.")

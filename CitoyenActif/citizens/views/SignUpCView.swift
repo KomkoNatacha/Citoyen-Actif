@@ -47,21 +47,19 @@ struct SignUpCView: View {
             TextField("Firstname",text: $firsname)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
             
             TextField("Lastname",text: $lastname)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
-            
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
         
 
             
             TextField("Email",text: $email)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
-                .border(.red,width: CGFloat(wrongEmail))
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .border(.red,width: CGFloat(wrongEmail))
                 .keyboardType(.emailAddress)
 
         
@@ -69,20 +67,20 @@ struct SignUpCView: View {
             TextField("Phone number",text: $phoneNumber)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 .keyboardType(.phonePad)
-            
-            
+    
+    
             
             TextField("Adresses",text: $adresse)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
             
             TextField("Password",text: $password)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 .padding(.bottom, 10)
 
             
@@ -91,7 +89,7 @@ struct SignUpCView: View {
             }
             .foregroundStyle(.white)
             .frame(width: 320,height: 50)
-            .background(Color.orange)
+            .background(.linearGradient(colors : [.orange,.orange], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
             .padding(.bottom, 15)
 
             Text("Already have an account? Sign In.")

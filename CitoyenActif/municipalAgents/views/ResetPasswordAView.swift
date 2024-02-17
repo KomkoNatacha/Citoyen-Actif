@@ -46,8 +46,7 @@ struct ResetPasswordAView: View {
             TextField("Agent number",text: $agentNumber)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
-                .border(.red,width: CGFloat(wrongNumber))
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .border(.red,width: CGFloat(wrongNumber))
                 .keyboardType(.emailAddress)
             
             
@@ -55,14 +54,12 @@ struct ResetPasswordAView: View {
             TextField("Password",text: $password)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
-            
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
             
             TextField("Confirmation Password",text: $confPassword)
                 .padding()
                 .frame(width: 320,height: 50)
-                .background(Color.black.opacity(0.05))
-                .padding(.bottom, 10)
+                .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .padding(.bottom, 10)
             
             
             
@@ -71,8 +68,8 @@ struct ResetPasswordAView: View {
             }
             .foregroundStyle(.white)
             .frame(width: 320,height: 50)
-            .background(Color.blue)
-            .padding(.bottom, 15)
+            .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                        .padding(.bottom, 15)
             
             Text("You remember? Login here.")
                 .foregroundStyle(Color.orange.opacity(1))

@@ -45,17 +45,17 @@ struct SignInAView: View {
                 TextField("Agent number",text: $agentNumber)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(Color.black.opacity(0.08))
                     .border(.red,width: CGFloat(wrongNumber))
-                    .padding(.bottom, 10)
-                   
+                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                
+                
 
                 SecureField("Password",text: $password)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(Color.black.opacity(0.08))
                     .border(.red,width: CGFloat(wrongPassword))
-                    .padding(.bottom, 10)
+                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                    .padding(.bottom,15)
 
                 
                 Button("Sign In"){
@@ -64,8 +64,8 @@ struct SignInAView: View {
                 
                 .foregroundStyle(.white)
                 .frame(width: 320,height: 50)
-                .background(Color.blue)
-                .padding(.bottom, 10)
+                .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                                .padding(.bottom, 10)
 
                 
                 Text("New user? Create Account.")

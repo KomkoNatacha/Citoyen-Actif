@@ -45,18 +45,17 @@ struct SignInCView: View {
                 TextField("Email",text: $email)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(Color.black.opacity(0.08))
                     .border(.red,width: CGFloat(wrongEmail))
-                    .padding(.bottom, 10)
+                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                     
                    
 
                 SecureField("Password",text: $password)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(Color.black.opacity(0.08))
                     .border(.red,width: CGFloat(wrongPassword))
-                    .padding(.bottom, 10)
+                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                    .padding(.bottom,10)
 
                 
                 Button("Sign In"){
@@ -65,13 +64,12 @@ struct SignInCView: View {
                 
                 .foregroundStyle(.white)
                 .frame(width: 320,height: 50)
-                .background(Color.blue)
-                .padding(.bottom, 10)
-
+                .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                .padding(.bottom,15)
                 
                 Text("New user? Create Account.")
                     .foregroundStyle(Color.orange.opacity(1))
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                     
                 
                 Text("Forgot Password?")
