@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignInAgentView: View {
+struct SignInAView: View {
     @State private var email : String = ""
     @State private var password : String = ""
     @State private var firsname : String  = ""
@@ -36,27 +36,24 @@ struct SignInAgentView: View {
             
             
             Text("Create your account")
-                .foregroundColor(Color.black.opacity(0.6))
+                .foregroundStyle(Color.black.opacity(0.6))
                 .padding(.bottom, 10)
             
             TextField("Firstname",text: $firsname)
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
             
             TextField("Lastname",text: $lastname)
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
             
             TextField("Email",text: $email)
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
                 .border(.red,width: CGFloat(wrongEmail))
-                .cornerRadius(10)
                 .keyboardType(.emailAddress)
 
             
@@ -65,7 +62,6 @@ struct SignInAgentView: View {
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
             
             
             
@@ -73,37 +69,34 @@ struct SignInAgentView: View {
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
-                .cornerRadius(10)
             
             TextField("Password",text: $password)
                 .padding()
                 .frame(width: 320,height: 50)
                 .background(Color.black.opacity(0.05))
                 .padding(.bottom, 10)
-                .cornerRadius(10)
             
             
             Button("Sign Up "){
                 
             }
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .frame(width: 320,height: 50)
             .background(Color.orange)
-            .cornerRadius(10)
             .padding(.bottom, 10)
             
             Text("Citizens? Click here.")
-                .foregroundColor(Color.blue.opacity(1))
+                .foregroundStyle(Color.blue.opacity(1))
                 .padding(.bottom, 10)
                 .bold()
             
             Text("Already have an account? Sign In.")
-                .foregroundColor(Color.blue.opacity(0.6))
+                .foregroundStyle(Color.blue.opacity(0.6))
             
         }
         .padding()
     }
 }
 #Preview {
-    SignInAgentView()
+    SignInAView()
 }

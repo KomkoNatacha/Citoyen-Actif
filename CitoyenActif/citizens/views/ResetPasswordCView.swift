@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ResetPasswordView: View {
+struct ResetPasswordCView: View {
     
     @State private var email : String = ""
     @State private var password : String = ""
@@ -82,5 +82,5 @@ struct ResetPasswordView: View {
 }
 
 #Preview {
-    ResetPasswordView()
+    ResetPasswordCView()
 }
