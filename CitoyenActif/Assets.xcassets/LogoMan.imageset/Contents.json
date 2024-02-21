@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "logo-man.png",
+      "filename" : "logo-man-remo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "logo-man-remo 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "logo-man-remo 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
