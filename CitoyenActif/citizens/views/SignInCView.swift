@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SignInCView: View {
-    @State private var email : String = ""
-    @State private var password : String = ""
+    
+    @StateObject var vmC = SignInCViewModel()
     
     var body: some View {
         NavigationStack{
@@ -32,28 +32,37 @@ struct SignInCView: View {
                     .foregroundStyle(Color.black.opacity(0.6))
                     .padding(.bottom, 10)
                 
-                TextField("Email",text: $email)
+                TextField("Email",text: $vmC.signInCDTO.email)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
                 
                 
-                SecureField("Password",text: $password)
+                SecureField("Password",text: $vmC.signInCDTO.password)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                     .padding(.bottom,10)
                 
-                
-                Button("Sign In"){
-                    
+                Button(action: {
+                    Task{
+                        await vmC.tryToConnect()
+                    }
+                }){
+                    Label("Sign In",systemImage: "")
+                        .foregroundStyle(.white)
+                        .frame(width: 320,height: 50)
+                        .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                        .padding(.bottom,15)
                 }
-                
-                .foregroundStyle(.white)
-                .frame(width: 320,height: 50)
-                .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
-                .padding(.bottom,15)
+                .navigationDestination(isPresented: $vmC.onSucces){
+                    HomeCitizenView()
+                }
+                .alert(isPresented: $vmC.onError, content: {
+                    Alert(title: Text("Connexion error"), message: Text("An error occurred while trying to connect"),dismissButton: Alert.Button.default(Text("Ok")))
+                })
+               
                 
                 NavigationLink(destination: SignUpCView()){
                     Text("New user? Create Account.")

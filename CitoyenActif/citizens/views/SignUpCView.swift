@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct SignUpCView: View {
-    @State private var email : String = ""
-    @State private var password : String = ""
-    @State private var firsname : String  = ""
-    @State private var lastname : String = ""
-    @State private var phoneNumber = ""
-    @State private var adresse : String = ""
-    @State private var wrongEmail = 0
-    
+
+    @StateObject var vmC = SignUpCViewModel()
+
     var body: some View {
         
         NavigationStack{
@@ -38,27 +33,27 @@ struct SignUpCView: View {
                     .foregroundStyle(Color.black.opacity(0.6))
                     .padding(.bottom, 10)
                 
-                TextField("Firstname",text: $firsname)
+                TextField("Firstname",text: $vmC.signUpCDTO.firstname)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
-                TextField("Lastname",text: $lastname)
+                TextField("Lastname",text: $vmC.signUpCDTO.lastname)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
                 
                 
-                TextField("Email",text: $email)
+                TextField("Email",text: $vmC.signUpCDTO.email)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .border(.red,width: CGFloat(wrongEmail))
+                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)               
                     .keyboardType(.emailAddress)
                 
                 
                 
-                TextField("Phone number",text: $phoneNumber)
+                TextField("Phone number",text: $vmC.signUpCDTO.phoneNumber)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
@@ -66,12 +61,12 @@ struct SignUpCView: View {
                 
                 
                 
-                TextField("Adresses",text: $adresse)
+                TextField("Adresses",text: $vmC.signUpCDTO.adresse)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
-                TextField("Password",text: $password)
+                TextField("Password",text: $vmC.signUpCDTO.password)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)

@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct ResetADTO {
+    
+    var agentNumber : String
+    var password : String
+    var confirmPassword : String
+    
+    static var empty : ResetADTO{
+        ResetADTO(agentNumber: "", password: "", confirmPassword: "")
+    }
+    
+}

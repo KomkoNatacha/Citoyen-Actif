@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct ResetCDTO {
+    
+    var email : String
+    var password : String
+    var confirmPassword : String
+    
+    static var empty : ResetCDTO{
+        ResetCDTO(email: "", password: "", confirmPassword: "")
+    }
+    
+}

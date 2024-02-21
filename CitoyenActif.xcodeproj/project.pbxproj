@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E06AB312B85898300374671 /* SignInCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB302B85898300374671 /* SignInCViewModel.swift */; };
+		1E06AB332B85899700374671 /* SignUpCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB322B85899700374671 /* SignUpCViewModel.swift */; };
+		1E06AB352B8589F400374671 /* ResetCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB342B8589F400374671 /* ResetCViewModel.swift */; };
+		1E06AB372B858A3C00374671 /* SignInAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB362B858A3C00374671 /* SignInAViewModel.swift */; };
+		1E06AB392B858A4B00374671 /* SignUpAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB382B858A4B00374671 /* SignUpAViewModel.swift */; };
+		1E06AB3B2B858A6D00374671 /* ResetAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB3A2B858A6D00374671 /* ResetAViewModel.swift */; };
+		1E06AB3D2B858B9F00374671 /* SignInCDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB3C2B858B9F00374671 /* SignInCDTO.swift */; };
+		1E06AB3F2B858BD100374671 /* SignUpCDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB3E2B858BD100374671 /* SignUpCDTO.swift */; };
+		1E06AB412B858BE600374671 /* ResetCDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB402B858BE600374671 /* ResetCDTO.swift */; };
+		1E06AB432B858C0A00374671 /* SignInADTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB422B858C0A00374671 /* SignInADTO.swift */; };
+		1E06AB452B858C1F00374671 /* SignUpADTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB442B858C1F00374671 /* SignUpADTO.swift */; };
+		1E06AB472B858C3600374671 /* ResetADTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB462B858C3600374671 /* ResetADTO.swift */; };
+		1E06AB492B859BDB00374671 /* HomeCitizenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB482B859BDB00374671 /* HomeCitizenView.swift */; };
+		1E06AB4B2B859C1500374671 /* HomeAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E06AB4A2B859C1500374671 /* HomeAgentView.swift */; };
 		1E666B532B7D9451007E88C6 /* CitoyenActifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B522B7D9451007E88C6 /* CitoyenActifApp.swift */; };
 		1E666B552B7D9451007E88C6 /* SignInCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666B542B7D9451007E88C6 /* SignInCView.swift */; };
 		1E666B572B7D9453007E88C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E666B562B7D9453007E88C6 /* Assets.xcassets */; };
@@ -40,6 +54,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E06AB302B85898300374671 /* SignInCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCViewModel.swift; sourceTree = "<group>"; };
+		1E06AB322B85899700374671 /* SignUpCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCViewModel.swift; sourceTree = "<group>"; };
+		1E06AB342B8589F400374671 /* ResetCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetCViewModel.swift; sourceTree = "<group>"; };
+		1E06AB362B858A3C00374671 /* SignInAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAViewModel.swift; sourceTree = "<group>"; };
+		1E06AB382B858A4B00374671 /* SignUpAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAViewModel.swift; sourceTree = "<group>"; };
+		1E06AB3A2B858A6D00374671 /* ResetAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetAViewModel.swift; sourceTree = "<group>"; };
+		1E06AB3C2B858B9F00374671 /* SignInCDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCDTO.swift; sourceTree = "<group>"; };
+		1E06AB3E2B858BD100374671 /* SignUpCDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCDTO.swift; sourceTree = "<group>"; };
+		1E06AB402B858BE600374671 /* ResetCDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetCDTO.swift; sourceTree = "<group>"; };
+		1E06AB422B858C0A00374671 /* SignInADTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInADTO.swift; sourceTree = "<group>"; };
+		1E06AB442B858C1F00374671 /* SignUpADTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpADTO.swift; sourceTree = "<group>"; };
+		1E06AB462B858C3600374671 /* ResetADTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetADTO.swift; sourceTree = "<group>"; };
+		1E06AB482B859BDB00374671 /* HomeCitizenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCitizenView.swift; sourceTree = "<group>"; };
+		1E06AB4A2B859C1500374671 /* HomeAgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAgentView.swift; sourceTree = "<group>"; };
 		1E666B4F2B7D9451007E88C6 /* CitoyenActif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitoyenActif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E666B522B7D9451007E88C6 /* CitoyenActifApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitoyenActifApp.swift; sourceTree = "<group>"; };
 		1E666B542B7D9451007E88C6 /* SignInCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCView.swift; sourceTree = "<group>"; };
@@ -144,6 +172,9 @@
 		1E6A8C492B7E905400EBDD37 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1E06AB3C2B858B9F00374671 /* SignInCDTO.swift */,
+				1E06AB3E2B858BD100374671 /* SignUpCDTO.swift */,
+				1E06AB402B858BE600374671 /* ResetCDTO.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -154,6 +185,7 @@
 				1E666B542B7D9451007E88C6 /* SignInCView.swift */,
 				1E666B7E2B7DD7D0007E88C6 /* SignUpCView.swift */,
 				1E666B802B7DD91D007E88C6 /* ResetPasswordCView.swift */,
+				1E06AB482B859BDB00374671 /* HomeCitizenView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -161,6 +193,9 @@
 		1E6A8C4B2B7E910C00EBDD37 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1E06AB302B85898300374671 /* SignInCViewModel.swift */,
+				1E06AB322B85899700374671 /* SignUpCViewModel.swift */,
+				1E06AB342B8589F400374671 /* ResetCViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -191,6 +226,7 @@
 				1E8042102B8048E5000B7BBB /* SignInAView.swift */,
 				1E6A8C4C2B7E98BD00EBDD37 /* SignUpAView.swift */,
 				1E8042122B804AF0000B7BBB /* ResetPasswordAView.swift */,
+				1E06AB4A2B859C1500374671 /* HomeAgentView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -198,6 +234,9 @@
 		1E80420C2B7FE35D000B7BBB /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1E06AB422B858C0A00374671 /* SignInADTO.swift */,
+				1E06AB442B858C1F00374671 /* SignUpADTO.swift */,
+				1E06AB462B858C3600374671 /* ResetADTO.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -205,6 +244,9 @@
 		1E80420D2B7FE36F000B7BBB /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1E06AB362B858A3C00374671 /* SignInAViewModel.swift */,
+				1E06AB382B858A4B00374671 /* SignUpAViewModel.swift */,
+				1E06AB3A2B858A6D00374671 /* ResetAViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -339,13 +381,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E06AB332B85899700374671 /* SignUpCViewModel.swift in Sources */,
+				1E06AB472B858C3600374671 /* ResetADTO.swift in Sources */,
+				1E06AB392B858A4B00374671 /* SignUpAViewModel.swift in Sources */,
 				1E6A8C4D2B7E98BE00EBDD37 /* SignUpAView.swift in Sources */,
+				1E06AB3D2B858B9F00374671 /* SignInCDTO.swift in Sources */,
+				1E06AB352B8589F400374671 /* ResetCViewModel.swift in Sources */,
+				1E06AB432B858C0A00374671 /* SignInADTO.swift in Sources */,
 				1E666B552B7D9451007E88C6 /* SignInCView.swift in Sources */,
 				1E80420F2B7FE459000B7BBB /* MainPageView.swift in Sources */,
 				1E666B7F2B7DD7D0007E88C6 /* SignUpCView.swift in Sources */,
+				1E06AB492B859BDB00374671 /* HomeCitizenView.swift in Sources */,
+				1E06AB372B858A3C00374671 /* SignInAViewModel.swift in Sources */,
+				1E06AB3B2B858A6D00374671 /* ResetAViewModel.swift in Sources */,
+				1E06AB4B2B859C1500374671 /* HomeAgentView.swift in Sources */,
 				1E666B532B7D9451007E88C6 /* CitoyenActifApp.swift in Sources */,
+				1E06AB3F2B858BD100374671 /* SignUpCDTO.swift in Sources */,
+				1E06AB412B858BE600374671 /* ResetCDTO.swift in Sources */,
 				1E8042132B804AF0000B7BBB /* ResetPasswordAView.swift in Sources */,
+				1E06AB312B85898300374671 /* SignInCViewModel.swift in Sources */,
 				1E666B812B7DD91D007E88C6 /* ResetPasswordCView.swift in Sources */,
+				1E06AB452B858C1F00374671 /* SignUpADTO.swift in Sources */,
 				1E8042112B8048E5000B7BBB /* SignInAView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,7 +31,7 @@ struct  MainPageView: View {
                 Text("Report problems, improve your community")
                     .foregroundStyle(Color.black.opacity(0.6))
                     .padding(.bottom, 50)
-                
+                    
                 
                 Text("Continue as")
                     .font(.title3)

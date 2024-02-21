@@ -8,13 +8,9 @@
 import SwiftUI
 
 struct SignUpAView: View {
-    @State private var email : String = ""
-    @State private var password : String = ""
-    @State private var firsname : String  = ""
-    @State private var lastname : String = ""
-    @State private var agentNumber = ""
-    @State private var city : String = ""
-    @State private var wrongEmail = 0
+    
+    @StateObject var vmA = SignUpAViewModel()
+
     
     
     var body: some View {
@@ -39,28 +35,28 @@ struct SignUpAView: View {
                     .foregroundStyle(Color.black.opacity(0.6))
                     .padding(.bottom, 10)
                 
-                TextField("Firstname",text: $firsname)
+                TextField("Firstname",text: $vmA.signUpADTO.firstname)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
-                TextField("Lastname",text: $lastname)
+                TextField("Lastname",text: $vmA.signUpADTO.lastname)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
-                TextField("Agent number",text: $agentNumber)
+                TextField("Agent number",text: $vmA.signUpADTO.agentnumber)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
                 
-                TextField("City",text: $city)
+                TextField("City",text: $vmA.signUpADTO.city)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
-                TextField("Password",text: $password)
+                TextField("Password",text: $vmA.signUpADTO.password)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)

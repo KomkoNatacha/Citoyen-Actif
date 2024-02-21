@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct SignInCDTO {
+    
+    var email : String
+    var password : String
+    
+    static var empty : SignInCDTO{
+        SignInCDTO(email: "", password: "")
+    }
+    
+}

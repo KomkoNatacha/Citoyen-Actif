@@ -9,12 +9,11 @@ import SwiftUI
 
 struct ResetPasswordCView: View {
     
-    @State private var email : String = ""
-    @State private var password : String = ""
-    @State private var confPassword : String = ""
-    @State private var wrongEmail = 0
+    @StateObject var vmC = ResetCViewModel()
+
     
     var body: some View {
+
         
         NavigationStack{
             
@@ -39,20 +38,20 @@ struct ResetPasswordCView: View {
                     .padding(.bottom, 15)
                 
                 
-                TextField("Email",text: $email)
+                TextField("Email",text: $vmC.resetCDTO.email)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .border(.red,width: CGFloat(wrongEmail))
+                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                     .keyboardType(.emailAddress)
                 
                 
                 
-                TextField("Password",text: $password)
+                TextField("Password",text: $vmC.resetCDTO.password)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
-                TextField("Confirmation Password",text: $confPassword)
+                TextField("Confirmation Password",text: $vmC.resetCDTO.confirmPassword)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .padding(.bottom, 10)
@@ -67,7 +66,7 @@ struct ResetPasswordCView: View {
                 .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 .padding(.bottom, 15)
                 
-                NavigationLink(destination: SignInCView()){ 
+                NavigationLink(destination: SignInCView()){
                     Text("You remember? Login here.")
                         .foregroundStyle(Color.orange.opacity(1))
                         .padding(.bottom, 10)

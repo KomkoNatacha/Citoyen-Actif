@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct ResetPasswordAView: View {
-    @State private var agentNumber : String = ""
-    @State private var password : String = ""
-    @State private var confPassword : String = ""
-    @State private var wrongNumber = 0
+
+    @StateObject var vmA = ResetAViewModel()
+
     
     var body: some View {
         
@@ -36,20 +35,20 @@ struct ResetPasswordAView: View {
                     .padding(.bottom, 15)
                 
                 
-                TextField("Agent number",text: $agentNumber)
+                TextField("Agent number",text: $vmA.resetADTO.agentNumber)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .border(.red,width: CGFloat(wrongNumber))
+                    .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                     .keyboardType(.emailAddress)
                 
                 
                 
-                TextField("Password",text: $password)
+                TextField("Password",text: $vmA.resetADTO.password)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
-                TextField("Confirmation Password",text: $confPassword)
+                TextField("Confirmation Password",text: $vmA.resetADTO.confirmPassword)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .padding(.bottom, 10)

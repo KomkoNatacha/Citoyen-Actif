@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct SignInAView: View {
-    @State private var agentNumber : String = ""
-    @State private var password : String = ""
-    @State private var wrongPassword = 0
-    @State private var wrongNumber = 0
+    
+    @StateObject var vmA = SignInAViewModel()
+
 
     var body: some View {
         
@@ -35,30 +34,41 @@ struct SignInAView: View {
                     .foregroundStyle(Color.black.opacity(0.6))
                     .padding(.bottom, 10)
                 
-                TextField("Agent number",text: $agentNumber)
+                TextField("Agent number",text: $vmA.signInADTO.agentNumber)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .border(.red,width: CGFloat(wrongNumber))
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 
+      
                 
                 
-                SecureField("Password",text: $password)
+                SecureField("Password",text: $vmA.signInADTO.password)
                     .padding()
                     .frame(width: 320,height: 50)
-                    .border(.red,width: CGFloat(wrongPassword))
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                     .padding(.bottom,15)
                 
                 
-                Button("Sign In"){
-                    
+                Button(action: {
+                    Task{
+                        await vmA.tryToConnect()
+                    }
+                }){
+                    Label("Sign In",systemImage: "")
+                        .padding()
+                        .foregroundStyle(.white)
+                        .frame(width: 320,height: 50)
+                        .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                        .padding(.bottom,15)
                 }
+                .navigationDestination(isPresented: $vmA.onSucces){
+                    HomeAgentView()
+                }
+                .alert(isPresented: $vmA.onError, content: {
+                    Alert(title: Text("Connexion error"), message: Text("An error occurred while trying to connect"),dismissButton: Alert.Button.default(Text("Ok")))
+                })
                 
-                .foregroundStyle(.white)
-                .frame(width: 320,height: 50)
-                .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
-                .padding(.bottom, 10)
+                
                 
                 NavigationLink(destination: SignUpAView()){
                     Text("New user? Create Account.")
