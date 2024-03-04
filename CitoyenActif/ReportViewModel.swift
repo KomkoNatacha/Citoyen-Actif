@@ -13,7 +13,9 @@ class ReportViewModel : ObservableObject{
     @Published var searchText = ""
     @Published var isSearching = false
     @Published var isSheetPresented = false
-
+    @Published var newTitle = ""
+    @Published var newImage = ""
+    @Published var newDescription = ""
     
     var filteredItems: [ReportModel] {
         if searchText.isEmpty {

@@ -23,11 +23,11 @@ struct HomeCitizenView: View {
                 }
             
             ProfilCitizenView()
-            .previewLayout(.sizeThatFits)
-            .padding()
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(radius: 5)
+                .previewLayout(.sizeThatFits)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(10)
+                .shadow(radius: 5)
                 .tabItem{
                     Label("Profil", systemImage: "person.crop.circle.fill")
                 }
@@ -141,14 +141,44 @@ struct CardView : View {
 
 
 struct CarteDeBrisView: View {
+    @StateObject var reportObject = ReportViewModel()
     var body: some View {
-        Text("Contenu de la vue de tous les reports")
+        NavigationStack {
+            VStack {
+                SearchBar(searchText: $reportObject.searchText, isSearching: $reportObject.isSearching)
+                
+                List{
+                    
+                    
+                    
+                }.navigationTitle("Carte des bris")
+            }.sheet(isPresented: $reportObject.isSheetPresented, content: {
+                
+                AddReportView(isSheetPresented: $reportObject.isSheetPresented)
+            })
+        }.overlay(
+            Button(action: {
+                reportObject.isSheetPresented.toggle()
+            }) {
+                Image(systemName: "plus")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
+                    .padding(16)
+                    .shadow(radius: 5)
+            }
+                .padding(.bottom, 16)
+                .padding(.trailing, 16)
+            , alignment: .bottomTrailing
+        )
     }
+    
 }
 
 
 struct ProfilCitizenView: View {
-
+    
     @StateObject var reportObject = SignUpCViewModel()
     
     var body: some View {
@@ -191,10 +221,8 @@ struct ProfileItem: View {
 
 struct AddReportView: View {
     @Binding var isSheetPresented: Bool
+    @StateObject var vm = ReportViewModel()
     
-    @State private var newTitle = ""
-    @State private var newImage = ""
-    @State private var newDescription = ""
     
     var body: some View {
         NavigationView {
@@ -202,18 +230,18 @@ struct AddReportView: View {
                 
                 Form {
                     Section(header: Text("Nouveau bri")) {
-                        TextField("Titre", text: $newTitle)
+                        TextField("Titre", text: $vm.newTitle)
                             .padding()
-                        TextField("Image", text: $newImage)
+                        TextField("Image", text: $vm.newImage)
                             .padding()
-                        TextField("Description", text: $newDescription)
+                        TextField("Description", text: $vm.newDescription)
                             .padding()
                     }
                 }
                 
-                                
+                
                 Button("Enregistrer") {
-                    let newReport = ReportModel(title: newTitle, image: newImage, description: newDescription)
+                    //_ = ReportModel(title: newTitle, image: newImage, description: newDescription)
                     //reportObject.addReport(newReport)
                     isSheetPresented = false
                 }

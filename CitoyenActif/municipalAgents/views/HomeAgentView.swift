@@ -36,8 +36,24 @@ struct HomeAgentView: View {
 
 
 struct ListeDeBrisReparerView: View {
+    
+    @StateObject var reportObject = ReportViewModel()
+    
     var body: some View {
-        Text("Contenu de la vue de la des bris reparer vide pour le moment")
+        NavigationStack {
+            VStack {
+                SearchBar(searchText: $reportObject.searchText, isSearching: $reportObject.isSearching)
+                
+                List{
+                    
+                    
+                    
+                }.navigationTitle("Liste des bris reparé")
+            }.sheet(isPresented: $reportObject.isSheetPresented, content: {
+                
+                AddReportView(isSheetPresented: $reportObject.isSheetPresented)
+            })
+        }
     }
 }
 
