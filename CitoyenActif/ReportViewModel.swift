@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+class ReportViewModel : ObservableObject{
+    
+    @Published var listReports = StoreReport()
+    @Published var searchText = ""
+    @Published var isSearching = false
+    @Published var isSheetPresented = false
+
+    
+    var filteredItems: [ReportModel] {
+        if searchText.isEmpty {
+            
+            return listReports.listReport
+        } else {
+            return listReports.listReport.filter { $0.title.lowercased().contains(searchText.lowercased()) }
+        }
+    }
+    
+}

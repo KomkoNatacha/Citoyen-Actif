@@ -20,7 +20,7 @@ class SignInAViewModel : ObservableObject {
         var request = URLRequest(url: URL(string : "https://www.uqtr.ca")!)
         request.httpMethod = "GET"
         do{
-            let (data,response) = try await URLSession.shared.data(for: request)
+            let (_,_) = try await URLSession.shared.data(for: request)
             onSucces = true
             
         } catch {

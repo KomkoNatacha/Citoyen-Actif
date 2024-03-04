@@ -72,14 +72,17 @@ struct SignUpCView: View {
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                     .padding(.bottom, 10)
                 
-                
-                Button("Sign Up "){
-                    
+                NavigationLink(destination: HomeCitizenView()){
+                    Button("Sign Up "){
+                        
+                    }
+                    .foregroundStyle(.white)
+                    .frame(width: 320,height: 50)
+                    .background(.linearGradient(colors : [.orange,.orange], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
+                    .padding(.bottom, 15)
                 }
-                .foregroundStyle(.white)
-                .frame(width: 320,height: 50)
-                .background(.linearGradient(colors : [.orange,.orange], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
-                .padding(.bottom, 15)
+                
+                
                 
                 NavigationLink(destination: SignInCView()){
                     

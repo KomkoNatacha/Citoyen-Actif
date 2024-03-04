@@ -12,6 +12,8 @@ class SignUpCViewModel : ObservableObject {
     @Published var signUpCDTO = SignUpCDTO.empty
     @Published var onSucces = false
     @Published var onError = false
+    @Published var succes = true
+
 
     
     
