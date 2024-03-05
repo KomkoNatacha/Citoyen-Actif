@@ -9,17 +9,14 @@ import SwiftUI
 
 struct ResetPasswordCView: View {
     
+    //View model pour la reinitialisation du mot de passe du citoyen
     @StateObject var vmC = ResetCViewModel()
 
     
     var body: some View {
-
-        
         NavigationStack{
             
-            
             VStack {
-                
                 
                 Image("Image")
                     .resizable()
@@ -31,20 +28,16 @@ struct ResetPasswordCView: View {
                     .font(.largeTitle)
                     .bold()
                     .padding(.bottom, 5)
-                
-                
+                       
                 Text("Citizen")
                     .foregroundStyle(Color.black.opacity(0.6))
                     .padding(.bottom, 15)
-                
-                
+                      
                 TextField("Email",text: $vmC.resetCDTO.email)
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                     .keyboardType(.emailAddress)
-                
-                
                 
                 TextField("Password",text: $vmC.resetCDTO.password)
                     .padding()
@@ -55,9 +48,7 @@ struct ResetPasswordCView: View {
                     .padding()
                     .frame(width: 320,height: 50)
                     .background(.linearGradient(colors : [.black.opacity(0.08),.black.opacity(0.08)], startPoint: .top, endPoint: .bottom), in : .buttonBorder)                .padding(.bottom, 10)
-                
-                
-                
+
                 Button("Reset "){
                     
                 }
@@ -66,15 +57,13 @@ struct ResetPasswordCView: View {
                 .background(.linearGradient(colors : [.blue,.blue], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 .padding(.bottom, 15)
                 
+                //lien de navigation vers la connexion de l'agent
                 NavigationLink(destination: SignInCView()){
                     Text("You remember? Login here.")
                         .foregroundStyle(Color.orange.opacity(1))
                         .padding(.bottom, 10)
                         .bold()
                 }
-                        
-                
-                
                 
             }
             .padding()

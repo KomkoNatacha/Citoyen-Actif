@@ -9,9 +9,11 @@ import SwiftUI
 
 struct HomeCitizenView: View {
     
+    //Viewmodel pour la gestion des reports
     @StateObject var reportObject = ReportViewModel()
     
     var body: some View {
+        //Menu
         TabView{
             ListDeBrisView(reportObject: reportObject)
                 .tabItem{
@@ -35,7 +37,7 @@ struct HomeCitizenView: View {
     }
 }
 
-
+//View pour afficher la liste des bris
 struct ListDeBrisView: View {
     @StateObject var reportObject = ReportViewModel()
     var body: some View {
@@ -80,7 +82,7 @@ struct ListDeBrisView: View {
     
 }
 
-
+//Barre de recherche
 struct SearchBar: View {
     @Binding var searchText: String
     @Binding var isSearching: Bool
@@ -139,7 +141,7 @@ struct CardView : View {
 
 
 
-
+//View pour afficher la carte des bris
 struct CarteDeBrisView: View {
     @StateObject var reportObject = ReportViewModel()
     var body: some View {
@@ -148,15 +150,15 @@ struct CarteDeBrisView: View {
                 SearchBar(searchText: $reportObject.searchText, isSearching: $reportObject.isSearching)
                 
                 List{
-                    
-                    
-                    
+  
                 }.navigationTitle("Carte des bris")
             }.sheet(isPresented: $reportObject.isSheetPresented, content: {
                 
                 AddReportView(isSheetPresented: $reportObject.isSheetPresented)
             })
         }.overlay(
+            
+            //Bouton pour afficher un nouveau rapport
             Button(action: {
                 reportObject.isSheetPresented.toggle()
             }) {
@@ -176,7 +178,7 @@ struct CarteDeBrisView: View {
     
 }
 
-
+//View pour afficher le profil du citoyen
 struct ProfilCitizenView: View {
     
     @StateObject var reportObject = SignUpCViewModel()

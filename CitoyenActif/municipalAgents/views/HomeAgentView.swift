@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeAgentView: View {
     var body: some View {
+        
+        //Menu
         TabView{
             ListDeBrisView()
                 .tabItem{
@@ -34,7 +36,7 @@ struct HomeAgentView: View {
     }
 }
 
-
+//View pour afficher la liste des bris reparer par l'agent
 struct ListeDeBrisReparerView: View {
     
     @StateObject var reportObject = ReportViewModel()
@@ -57,6 +59,7 @@ struct ListeDeBrisReparerView: View {
     }
 }
 
+//View pour afficher le profil de l'agent
 struct ProfilAgentView: View {
     @StateObject var vmA = SignUpAViewModel()
     var body: some View {

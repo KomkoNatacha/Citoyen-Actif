@@ -7,6 +7,7 @@
 
 import Foundation
 
+//DTO pour la creation d'un compte pour un citoyen
 struct SignUpCDTO {
     
     var firstname : String

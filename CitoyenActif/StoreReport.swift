@@ -10,9 +10,11 @@ import Foundation
 
 class StoreReport {
     
+    //Liste des observables de rapports
     @Published var listReport = [ReportModel]()
     
     init() {
+        //Initialisation de la liste des rapports
         self.listReport.append(ReportModel(title: "Bris 1", image: "image1", description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."))
         self.listReport.append(ReportModel(title: "Bris 2", image: "image2", description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."))
         self.listReport.append(ReportModel(title: "Bris 3", image: "image3", description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."))

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// ViewModel pour gérer l'inscription d'un citoyen
 class SignUpCViewModel : ObservableObject {
     
     @Published var signUpCDTO = SignUpCDTO.empty
@@ -17,17 +18,4 @@ class SignUpCViewModel : ObservableObject {
 
     
     
-    @MainActor
-    func tryToConnect() async {
-        var request = URLRequest(url: URL(string : "https://www.uqtr.ca")!)
-        request.httpMethod = "GET"
-        do{
-            let (data,response) = try await URLSession.shared.data(for: request)
-            onSucces = true
-            
-        } catch {
-            print(error)
-            onError = true
-        }
-    }
 }

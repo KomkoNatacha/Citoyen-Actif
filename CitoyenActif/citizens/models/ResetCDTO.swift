@@ -7,6 +7,7 @@
 
 import Foundation
 
+//DTO pour reinitialiser le mot de passe du citoyen
 struct ResetCDTO {
     
     var email : String

@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Model pour le rapport
 class ReportModel : Identifiable, ObservableObject  {
     
     let id = UUID()

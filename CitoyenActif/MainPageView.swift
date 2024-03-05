@@ -17,6 +17,7 @@ struct  MainPageView: View {
             
             VStack {
                 
+                //Logo
                 Image("mainIcon")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -40,7 +41,7 @@ struct  MainPageView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     
-                
+                    //Navigation vers citoyen
                         NavigationLink(destination: SignInCView()){
                             HStack {
                                 
@@ -72,7 +73,7 @@ struct  MainPageView: View {
                                     .shadow(radius: 3))
                         }
                     
-                    
+                    //Navigation vers agent municipal
                     NavigationLink(destination: SignInAView()){
                         HStack {
                             Image("LogoMan")

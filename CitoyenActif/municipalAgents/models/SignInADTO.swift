@@ -7,6 +7,7 @@
 
 import Foundation
 
+//DTO pour la connexion de l'agent municipal
 struct SignInADTO {
     
     var agentNumber : String

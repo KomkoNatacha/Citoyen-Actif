@@ -7,25 +7,12 @@
 
 import Foundation
 
+// ViewModel pour la reinitialisation du mot de passe de l'agent
 class ResetAViewModel : ObservableObject {
     
     @Published var resetADTO = ResetADTO.empty
     @Published var onSucces = false
     @Published var onError = false
 
-    
-    
-    @MainActor
-    func tryToConnect() async {
-        var request = URLRequest(url: URL(string : "https://www.uqtr.ca")!)
-        request.httpMethod = "GET"
-        do{
-            let (data,response) = try await URLSession.shared.data(for: request)
-            onSucces = true
-            
-        } catch {
-            print(error)
-            onError = true
-        }
-    }
+
 }

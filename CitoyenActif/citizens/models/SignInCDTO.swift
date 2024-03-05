@@ -7,6 +7,7 @@
 
 import Foundation
 
+//DTO pour la connexion du citoyen
 struct SignInCDTO {
     
     var email : String

@@ -7,6 +7,7 @@
 
 import Foundation
 
+//DTO pour la creation d'un compte pour un agent municipal
 struct SignUpADTO {
     
     var firstname : String

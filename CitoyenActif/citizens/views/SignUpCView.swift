@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SignUpCView: View {
-
+    
+    //View model pour la creation du compte citoyen
     @StateObject var vmC = SignUpCViewModel()
 
     var body: some View {
@@ -83,7 +84,7 @@ struct SignUpCView: View {
                 }
                 
                 
-                
+                //Lien de navigation vers la page de connexion
                 NavigationLink(destination: SignInCView()){
                     
                     Text("Already have an account? Sign In.")

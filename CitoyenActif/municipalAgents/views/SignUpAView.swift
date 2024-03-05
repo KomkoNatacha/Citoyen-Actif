@@ -9,9 +9,9 @@ import SwiftUI
 
 struct SignUpAView: View {
     
+    //View model pour la creation du compte de l'agent
     @StateObject var vmA = SignUpAViewModel()
 
-    
     
     var body: some View {
         
@@ -71,6 +71,7 @@ struct SignUpAView: View {
                 .background(.linearGradient(colors : [.orange,.orange], startPoint: .top, endPoint: .bottom), in : .buttonBorder)
                 .padding(.bottom,15)
                 
+                //Lien de navigation vers la page de connexion
                 NavigationLink(destination: SignInAView()){
                     Text("Already have an account? Sign In.")
                         .foregroundStyle(Color.blue.opacity(0.7))

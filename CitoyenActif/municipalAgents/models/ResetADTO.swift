@@ -7,6 +7,7 @@
 
 import Foundation
 
+//DTO pour reinitialiser le mot de passe de l'agent munipal
 struct ResetADTO {
     
     var agentNumber : String

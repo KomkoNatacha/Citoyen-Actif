@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Viewmodel pour la gestion des rapports
 class ReportViewModel : ObservableObject{
     
     @Published var listReports = StoreReport()
@@ -17,6 +18,7 @@ class ReportViewModel : ObservableObject{
     @Published var newImage = ""
     @Published var newDescription = ""
     
+    //Liste filtre des rapports en foncion de la recherche
     var filteredItems: [ReportModel] {
         if searchText.isEmpty {
             

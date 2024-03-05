@@ -144,11 +144,11 @@
 				1E80420A2B7FDF83000B7BBB /* municipalAgents */,
 				1E666B522B7D9451007E88C6 /* CitoyenActifApp.swift */,
 				1E80420E2B7FE459000B7BBB /* MainPageView.swift */,
-				1E666B562B7D9453007E88C6 /* Assets.xcassets */,
-				1E666B582B7D9453007E88C6 /* Preview Content */,
 				523FB1C52B941B27005DC4EA /* ReportModel.swift */,
 				523FB1C72B941D1A005DC4EA /* StoreReport.swift */,
 				523FB1C92B942596005DC4EA /* ReportViewModel.swift */,
+				1E666B562B7D9453007E88C6 /* Assets.xcassets */,
+				1E666B582B7D9453007E88C6 /* Preview Content */,
 			);
 			path = CitoyenActif;
 			sourceTree = "<group>";
@@ -194,7 +194,6 @@
 				1E666B542B7D9451007E88C6 /* SignInCView.swift */,
 				1E666B7E2B7DD7D0007E88C6 /* SignUpCView.swift */,
 				1E666B802B7DD91D007E88C6 /* ResetPasswordCView.swift */,
-				1E06AB302B85898300374671 /* SignInCViewModel.swift */,
 				1E06AB482B859BDB00374671 /* HomeCitizenView.swift */,
 			);
 			path = views;
@@ -203,6 +202,7 @@
 		1E6A8C4B2B7E910C00EBDD37 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1E06AB302B85898300374671 /* SignInCViewModel.swift */,
 				1E06AB322B85899700374671 /* SignUpCViewModel.swift */,
 				1E06AB342B8589F400374671 /* ResetCViewModel.swift */,
 			);

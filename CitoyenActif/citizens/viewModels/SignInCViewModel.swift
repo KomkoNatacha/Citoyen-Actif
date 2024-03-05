@@ -7,19 +7,22 @@
 
 import Foundation
 
+// ViewModel pour la connexion d'un citoyen
 class SignInCViewModel : ObservableObject {
     
+    // Proprietes pour gérer l'état de la connexion
     @Published var signInCDTO = SignInCDTO.empty
     @Published var onSucces = false
     @Published var onError = false
 
     
-    
+    // Fonction asynchrone pour gerer la connexion
     @MainActor
     func tryToConnect() async {
         var request = URLRequest(url: URL(string : "https://www.uqtr.ca")!)
         request.httpMethod = "GET"
         do{
+            // Tentative d'envoi de la requête en mode asynchrone
             let (_,_) = try await URLSession.shared.data(for: request)
             onSucces = true
             
